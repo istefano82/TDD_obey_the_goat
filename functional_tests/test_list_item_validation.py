@@ -57,11 +57,11 @@ class ItemValidationTest(FunctionalTest):
 
         # She accidentally tries to enter a duplicate item  
         self.get_item_input_box().send_keys("Buy wellies")
-        self.get_item_input_box().send_keys("Keys.ENTER")
+        self.get_item_input_box().send_keys(Keys.ENTER)
 
         # She sees a helpfull message
         self.wait_for(lambda: self.assertEqual(
-            self.browser.find_element_by_css_selector('.has_error').text,
+            self.browser.find_element_by_css_selector('.has-error').text,
             "You've already got this in your list"
         ))
 
