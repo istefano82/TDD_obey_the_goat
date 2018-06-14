@@ -40,6 +40,9 @@ class ListPage(object):
 
 
 	def get_shared_with_list(self):
-		return self.browser.find_element_by_css_selector(
+		return self.test.browser.find_elements_by_css_selector(
 			'.list-sharee'
 		)
+
+	def get_list_owner(self):
+		return self.test.browser.find_element_by_id('id_list_owner').text
