@@ -1,1 +1,1 @@
-Following the examples in the Book.
+Create a Django TODO application using Test Driven Development.
